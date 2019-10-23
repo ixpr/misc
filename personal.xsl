@@ -5,10 +5,10 @@
 
 	<xsl:param name="mail" /> 
 	
-	 <xsl:template match="property"  mode="extra_goods_lk"> 
+	<xsl:template match="property"  mode="extra_goods_lk"> 
 		<xsl:param name="var1" tunnel="yes"/>
 		<img src="{document(concat('udata://system/makeThumbnailFull/(', substring(value,2), ')/313/294/'))/udata/src}" class="catalog__item__block1__img1 location__img" alt="{$var1}" />
-    </xsl:template>
+    	</xsl:template>
 	
 	<xsl:template match="/result[@method = 'uclaim']">
 	
