@@ -5,14 +5,14 @@
                 <h2><?=the_title();?></h2>
                 <div class="blue rasp">
                     <?php
-                    the_post();
-					$duration = get_user_meta( $_SESSION['city_id'], 'duration', true );
-					if ($duration) {
-						$new_content = str_replace('90',$duration,get_the_content());
-					} else {
-						$new_content = get_the_content();
-					}
-					echo $new_content;
+                    	the_post();
+			$duration = get_user_meta( $_SESSION['city_id'], 'duration', true );
+			if ($duration) {
+				$new_content = str_replace('90',$duration,get_the_content());
+			} else {
+				$new_content = get_the_content();
+			}
+			echo $new_content;
                     ?>
                 </div>
             </div>
@@ -45,7 +45,7 @@
             $price1 = get_field('price1', 'user_'.$_SESSION['city_id']);
             $price4 = get_field('price4', 'user_'.$_SESSION['city_id']);
             $price8 = get_field('price8', 'user_'.$_SESSION['city_id']);
-			$currency = get_field('currency', 'user_'.$_SESSION['city_id']);
+	    $currency = get_field('currency', 'user_'.$_SESSION['city_id']);
             if ($price1 || $price || $price8):
         ?>
         <h1>Цены на основной курс</h1>
