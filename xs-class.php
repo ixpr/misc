@@ -273,5 +273,4 @@ class axiomus_xs extends def_module {
     }
 
 
-};
-?>
+}; ?>
