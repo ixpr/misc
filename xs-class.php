@@ -227,13 +227,8 @@ class axiomus_xs extends def_module {
     }
 
     public function createAxiomusOrder(order $order, $bCommit = false) {
-        /*$deliveryId = $order->getValue('delivery_id');
-
-        $delivery = delivery::get($deliveryId);
-
-        var_dump(get_class($delivery));*/
 		
-		$deliveryType = getRequest('deliveryType');
+	$deliveryType = getRequest('deliveryType');
 
         switch($deliveryType) {
             case 'axiomusCapitalsCourierDelivery':
